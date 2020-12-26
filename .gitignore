@@ -1,1 +1,7 @@
-.history
+.history/
+.vscode/
+.idea/
+
+.env
+
+wp-content/
