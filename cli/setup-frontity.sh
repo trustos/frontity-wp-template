@@ -17,6 +17,6 @@ if [ -f .env ]; then
 
     # Add project folder to the gitignore
     if [ -f .gitignore ]; then
-        echo "$APP_NAME" >> .gitignore
+        echo "\n$APP_NAME/" >> .gitignore
     fi
 fi
