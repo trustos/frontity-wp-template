@@ -7,6 +7,7 @@ ARG FRONTITY_BUILD_DEVELOPMENT
 RUN mkdir -p usr/src/app
 WORKDIR /usr/src/app
 COPY ${FRONTITY_NAME} .
-RUN npm install
+RUN npm install --only=production
+RUN npx frontity build
 EXPOSE ${FRONTITY_SERVE_PORT}
 CMD ["npx", "frontity", "serve"]
