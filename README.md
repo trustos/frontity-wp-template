@@ -5,7 +5,7 @@
 * Download and install the version that best matches your taste.
 ## 2. Git checkout the docker repo
 * Checkout the git repo from [https://github.com/trustos/wp-template](https://github.com/trustos/wp-template)
-## 3. Edit as needed the .env file
+## 3. Edit as needed the .env-example file and copy it in a .env file
 In the file with environments you can control a lot of things.
 * #APP SETTINGS
     * APP_NAME - the name of your project
