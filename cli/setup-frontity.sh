@@ -14,6 +14,9 @@ if [ -f .env ]; then
 
     # Run project create command with args
     npx frontity create $APP_NAME --theme @frontity/twentytwenty-theme --no-prompt
+    
+    #create new theme package
+    cd $APP_NAME && npx frontity create-package "${APP_NAME}-theme" --no-prompt
 
     # Add project folder to the gitignore
     if [ -f .gitignore ]; then

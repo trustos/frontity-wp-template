@@ -72,7 +72,9 @@ services:
         - FRONTITY_DEV_PORT=${FRONTITY_DEV_PORT}
         - FRONTITY_SERVE_PORT=${FRONTITY_SERVE_PORT}
         - FRONTITY_BUILD_DEVELOPMENT=${FRONTITY_BUILD_DEVELOPMENT}
-    volumes: ['./${APP_NAME}:/usr/src/app']
+    volumes: 
+      - ./${APP_NAME}:/usr/src/app
+      - ./${APP_NAME}/node_modules:/usr/src/app/node_modules
     ports:
       - "${FRONTITY_DEV_PORT}:3000"
     networks:

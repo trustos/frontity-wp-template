@@ -6,7 +6,8 @@
 ## 2. Git checkout the docker repo
 * Checkout the git repo from [https://github.com/trustos/wp-template](https://github.com/trustos/wp-template)
 ## 3. Edit as needed the .env-example file and copy it in a .env file
-In the file with environments you can control a lot of things.
+For fast .env file creation use: `cp .env-example .env`\
+Then edit and replace the following variables or leave them like that(NOT RECOMMENDED)
 * #APP SETTINGS
     * APP_NAME - the name of your project
 
