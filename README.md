@@ -33,7 +33,7 @@ Then edit and replace the following variables or leave them like that(NOT RECOMM
 Run the following command to setup the frontity project\
 `cd cli && sh setup-frontity.sh`
 ## 5. Edit the frontity.settings.js
- Go to the frontity project folder and edit the frontity.settings.js json file with the url of the wordpress installation. If it is in docker container - get the docker IPv4 Address`(default: 172.23.0.23)` from network and set it in @frontity/wp-source -> source -> url.\
+ Go to the frontity project folder and edit the frontity.settings.js json file with the url of the wordpress installation. If it is in docker container - get the docker IPv4 Address(`docker inspect <container_id> | grep "IPAddress"`). By default it is `(default: 172.23.0.23)` from network and set it in @frontity/wp-source -> source -> url.\
  [`Example: "url": http://172.23.0.23`] \
  !IMPORTANT: For the local development the url should be only with HTTP. HTTPS will resolve to Innternal error as the SSL is not configured.
 ## 6. Run the docker-compose to build the images
