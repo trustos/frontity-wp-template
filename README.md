@@ -21,7 +21,6 @@ Then edit and replace the following variables or leave them like that(NOT RECOMM
 * #WP SETTINGS
     * WP_PORT - default exposed WP port
     * WP_DEBUG - debug WP (bool)
-    * WP_STATIC_IP - the static ip configured for the WP installation`(default: 172.23.0.23)`\
     Full list of supported environnment variables: [wordpress](https://hub.docker.com/_/wordpress)
 
 * #FRONTITY SETTINGS
@@ -33,8 +32,8 @@ Then edit and replace the following variables or leave them like that(NOT RECOMM
 Run the following command to setup the frontity project\
 `cd cli && sh setup-frontity.sh`
 ## 5. Edit the frontity.settings.js
- Go to the frontity project folder and edit the frontity.settings.js json file with the url of the wordpress installation. If it is in docker container - get the docker IPv4 Address(`docker inspect <container_id> | grep "IPAddress"`). By default it is `(default: 172.23.0.23)` from network and set it in @frontity/wp-source -> source -> url.\
- [`Example: "url": http://172.23.0.23`] \
+ Go to the frontity project folder and edit the frontity.settings.js json file with the wordpress service alias name. This should be set in @frontity/wp-source -> source -> url.
+ [`Example: "url": http://wordpress/`] \
  !IMPORTANT: For the local development the url should be only with HTTP. HTTPS will resolve to Innternal error as the SSL is not configured.
 ## 6. Run the docker-compose to build the images
 Run the following command from the main project directory to run the docker containers:\

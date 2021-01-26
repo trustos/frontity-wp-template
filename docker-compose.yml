@@ -58,8 +58,7 @@ services:
         - WORDPRESS_DB_PASSWORD=${WP_DB_PASSWORD}
         - WORDPRESS_DEBUG=${WP_DEBUG}
     networks:
-      wpsite:
-        ipv4_address: ${WP_STATIC_IP}
+      - wpsite
     container_name: ${APP_NAME}-wordpress
   # Frontity 
   web:
@@ -84,8 +83,5 @@ services:
       - wpsite
 networks:
   wpsite:
-    ipam:
-      config:
-        - subnet: 172.23.0.0/16
 volumes:
   db_data:
